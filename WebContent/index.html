@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m,sap.ui.commons"
+				data-sap-ui-xx-bindingSyntax = "complex"
+				data-sap-ui-resourceroots = '{
+					"order_monitor": "./order_monitor",
+					"sap.order_monitor": "./"
+				}'
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+		
+		<style type="text/css">
+			#orderdata {
+				padding: 0px;
+			}
+			.custTableNav table th{
+				background: #f5f5f5 !important;
+				color: #457aae !important;
+				font-weight: bold !important;
+			}
+			.custTableNav table th label{
+				color: #457aae !important;
+				font-weight: normal !important;
+				
+			}
+			.orderno{
+				padding: 0px !important;
+				color: #000000 !important;
+			}
+			.columnhdr{
+				color: #457aae !important;
+				font-weight: !important;
+			}			
+			.custTableNav table tr {
+				cursor: pointer;
+			}
+			
+		
+		</style>
+
+		<script>				
+				jQuery.sap.require("sap.order_monitor.common");
+				
+				new sap.m.Shell("Shell",{
+					app : new sap.ui.core.ComponentContainer({
+						name : "sap.order_monitor"
+					})
+				}).placeAt("content");
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
